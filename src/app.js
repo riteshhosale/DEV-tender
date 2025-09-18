@@ -12,7 +12,6 @@ app.post("/user/1", (req, res) => {
 app.use("/test", (req, res) => {
   res.send({"message": "test route"})
   })
-
 app.listen(port, () => {
   console.log(`server is successfully running on port ${port}`)
 })
