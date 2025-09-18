@@ -2,15 +2,19 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/test', (req, res) => {
+app.use('/test/1', (req, res) => {
+  res.send('Hello from the other side!') 
+})
+
+app.use('/test', (req, res) => {
   res.send('Hello World!') 
 })
 
-app.get('/dashboard', (req, res) => {
+app.use('/dashboard', (req, res) => {
   res.send('Hello Dashboard!') 
 })
 
-app.get('/settings', (req, res) => {
+app.use('/settings', (req, res) => {
   res.send('Hello Settings!') 
 })
 
