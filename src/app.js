@@ -10,9 +10,9 @@ app.use('/test', (req, res) => {
   res.send('Hello World!') 
 })
 
-app.use('/dashboard', (req, res) => {
-  res.send('Hello Dashboard!') 
-})
+app.post("/user/1", (req, res) => {
+  res.send({"message": "user created successfully"})
+})  
 
 app.use('/settings', (req, res) => {
   res.send('Hello Settings!') 
